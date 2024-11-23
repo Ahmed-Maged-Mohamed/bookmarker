@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css " rel="stylesheet">
+</head>
+
+<body class="bg-main">
+    <main class="interface py-5 position-relative">
+        <div class="container d-flex flex-column  align-items-center justify-content-center ">
+            <div class="title  position-relative">
+                <h1 class="py-2">BookMarker</h1>
+            </div>
+            <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex justify-content-center align-items-center flex-column gap-4">
+                <h2 >
+                    <i class="fa-solid fa-bookmark"></i>
+                    Book Mark Your Favorite Sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name w-100">
+                    <label for="sitename"><span><i class="fa-solid fa-book-bookmark mx-2"></i></span>Site Name</label>
+                    <input oninput="validateform(this)" class="form-control " type="text" placeholder="Bookmark Name" id="sitename" >
+                </div>
+                <div class="site-url w-100">
+                    <label for="siteurl"> <span><i class="fa-solid fa-link py-2"></i></span> Site URL</label>
+                    <input oninput="validateform(this)" type="text" id="siteurl" placeholder="Website URL" class="form-control" >
+                </div>
+                <button onclick="submit()" id="submitbtn" class="btn btn-outline-danger px-5">Submit</button>
+            </div>
+            <table class="table bg-light mt-4 text-center ">
+                <thead>
+                  <tr><th class="text-capitalize">index</th>
+                  <th class="text-capitalize">Website Name</th>
+                  <th class="text-capitalize">Visit</th>
+                  <th class="text-capitalize">Delete</th>
+                </tr></thead>
+                <tbody id="tableContent">
+                </tbody>
+              </table>
+        </div>
+    </main>
+    <script src="./JS/index.js"></script>
+    <script src="https://kit.fontawesome.com/88c7c7c22b.js" crossorigin="anonymous"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js "></script>
+</body>
+
+</html>
